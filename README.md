@@ -19,4 +19,5 @@ conditional expressions
 modules in terraform
 terraform state deep dive| remote backend with s3| statefile locking with ddb
 
-terraform state file - record the information of the infrastructure that it has created 
+terraform state file - record the information of the infrastructure that it has created
+terraform proviosioners 
