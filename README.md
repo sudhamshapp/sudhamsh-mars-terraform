@@ -6,6 +6,7 @@ terraform fmt
 terraform plan
 terraform apply --auto-approve
 terraform destroy --auto-approve
+terraform show - helps retrirve the statefile(terraform.tfstate)
 how to run terraform in the ci/cd
 Multi cloud - Hybrid cloud srchitecture of terraform
 Multi region - in a specific cloud
@@ -16,4 +17,6 @@ variables - input(pass some info to the terraform, terraform apply does it for u
 terraform.tfvars
 conditional expressions
 modules in terraform
-terraform state deep dive| remote backend | state locking
+terraform state deep dive| remote backend with s3| statefile locking with ddb
+
+terraform state file - record the information of the infrastructure that it has created 
