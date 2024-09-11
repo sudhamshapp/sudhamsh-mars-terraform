@@ -12,6 +12,7 @@ Multi region - in a specific cloud
 
 I don't remember the syntax 100 percent, but I give a rough overview
 
-variables - input(pass some info to the terraform) and output variables(terraform to print a particular value on the terminal)
+variables - input(pass some info to the terraform, terraform apply does it for us behind the scenes) and output variables(terraform to print a particular value on the terminal)
 terraform.tfvars
-conditionals
+conditional expressions
+modules in terraform
