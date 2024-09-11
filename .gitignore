@@ -1,5 +1,12 @@
 # Ignore Terraform state files and backups
-*.tfstate
+terraform.tfstate
+terraform.tfstate.backup
+
+# Ignore any other Terraform state files with extensions (e.g., .tfstate.<timestamp>)
 *.tfstate.*
-*.terraform.*
-.terraform
+ 
+# Ignore the .terraform directory (contains provider and module caches)
+.terraform/
+
+# Ignore Terraform lock file (optional, can be kept or removed depending on your workflow)
+.terraform.lock.hcl
