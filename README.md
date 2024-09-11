@@ -16,3 +16,4 @@ variables - input(pass some info to the terraform, terraform apply does it for u
 terraform.tfvars
 conditional expressions
 modules in terraform
+terraform state deep dive| remote backend | state locking
