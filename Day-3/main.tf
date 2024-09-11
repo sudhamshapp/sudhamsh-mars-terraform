@@ -6,3 +6,5 @@ module "thiscouldbeanyname" {
 
 
 }
+
+# No need of writing the entire code when we use modules, just define the source and assign the appropriate values that are in the variables.tf
