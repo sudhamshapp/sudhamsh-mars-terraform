@@ -6,7 +6,9 @@ terraform fmt
 terraform plan
 terraform apply --auto-approve
 terraform destroy --auto-approve
-terraform show - helps retrirve the statefile(terraform.tfstate)
+terraform show - helps retrirve the statefile
+terraform apply -var-file=stage.tfvars
+(terraform.tfstate)
 how to run terraform in the ci/cd
 Multi cloud - Hybrid cloud srchitecture of terraform
 Multi region - in a specific cloud
@@ -20,4 +22,49 @@ modules in terraform
 terraform state deep dive| remote backend with s3| statefile locking with ddb
 
 terraform state file - record the information of the infrastructure that it has created
-terraform proviosioners 
+terraform proviosioners(file, remote-exec and local-exec)
+
+terraform workspaces - instead of re-writing the terraform configuration for different environemts, will use one terraform configuration file across different environments using workspaces
+helps create the statefile per environment(stage, dev, prod)
+terraform workspace new stage
+terraform workspace new dev
+terraform workspace new prod
+terraform workspace select dev
+terraform workspace show
+
+mars@Sudhamshs-MacBook-Air Day-6 % terraform workspace show
+dev
+mars@Sudhamshs-MacBook-Air Day-6 % terraform workspace list
+  default
+* dev
+  prod
+  stage
+
+mars@Sudhamshs-MacBook-Air Day-6 % terraform workspace select stage
+Switched to workspace "stage".
+mars@Sudhamshs-MacBook-Air Day-6 % terraform workspace list        
+  default
+  dev
+  prod
+* stage
+
+mars@Sudhamshs-MacBook-Air Day-6 % terraform workspace show
+stage
+
+mars@Sudhamshs-MacBook-Air Day-6 % tree .
+.
+├── main.tf
+├── modules
+│   └── ec2-instance
+│       ├── main.tf
+│       ├── provider.tf
+│       └── varaible.tf
+├── terraform.tfstate.d
+│   ├── dev
+│   │   └── terraform.tfstate
+│   ├── prod
+│   └── stage
+│       └── terraform.tfstate
+└── terraform.tfvars
+
+7 directories, 7 files
