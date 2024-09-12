@@ -8,6 +8,10 @@ terraform apply --auto-approve
 terraform destroy --auto-approve
 terraform show - helps retrirve the statefile
 terraform apply -var-file=stage.tfvars
+terraform refresh
+terraform plan -generate-config-out=generated_resources.tf - here the terraform configuration file should have import block - refer this video - https://www.youtube.com/watch?v=-4IMy5ihiiU&list=PLdpzxOOAlwvI0O4PeKVV1-yJoX2AqIWuf&index=8
+terraform import aws_instance.thiscouldbeanything i-0ba34b373e28f9e9d
+
 (terraform.tfstate)
 how to run terraform in the ci/cd
 Multi cloud - Hybrid cloud srchitecture of terraform
