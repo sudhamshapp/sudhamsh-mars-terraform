@@ -75,10 +75,10 @@ how to integrate terraform with hashicorp vault and retrieve the secrets from ha
 to retrieve the infrastructure we use data keyword and to proviosion use the resiurce keyword
 
 
-terraform import - we're importing the existing configuration that is not created by terraform
+terraform import block- we're importing the existing configuration that is not created by terraform
 
 terraform plan -generate-config-out=generated_resources.tf
 terraform import aws_instance.thiscouldbeanything i-0ba34b373e28f9e9d
 
-terraform drift - you can detect the drift in your organzation infrastructure change if someone makes manually, you can run it as cronjob for a specific interval
+terraform drift - you can detect the drift in your organzation infrastructure change if someone makes manually, you can run it as cronjob for a specific interval and the command used - 'terraform refresh'
 we can do it through terraform refresh as well - it updates the statefile if there is a modification done on the aws UI manually
