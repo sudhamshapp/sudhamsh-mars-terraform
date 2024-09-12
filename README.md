@@ -68,3 +68,17 @@ mars@Sudhamshs-MacBook-Air Day-6 % tree .
 └── terraform.tfvars
 
 7 directories, 7 files
+
+Hashicorp vault - popular choice for secret management and we can integrate the hashicorp vault with terraform, ci/cd, k8s
+how to integrate terraform with hashicorp vault and retrieve the secrets from hashicorp vault
+
+to retrieve the infrastructure we use data keyword and to proviosion use the resiurce keyword
+
+
+terraform import - we're importing the existing configuration that is not created by terraform
+
+terraform plan -generate-config-out=generated_resources.tf
+terraform import aws_instance.thiscouldbeanything i-0ba34b373e28f9e9d
+
+terraform drift - you can detect the drift in your organzation infrastructure change if someone makes manually, you can run it as cronjob for a specific interval
+we can do it through terraform refresh as well - it updates the statefile if there is a modification done on the aws UI manually
